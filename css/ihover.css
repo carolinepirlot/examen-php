@@ -1,0 +1,155 @@
+.ih-item {
+  position: relative;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.ih-item,
+.ih-item * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ih-item a {
+  color: #333;
+}
+.ih-item a:hover {
+  text-decoration: none;
+}
+.ih-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.ih-item.square {
+  position: relative;
+  height: 197px;
+}
+
+.vignettesEvents .ih-item.square {
+  height: 220px;
+}
+.ih-item.square .info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.ih-item.square.effect10 {
+  overflow: hidden;
+}
+.ih-item.square.effect10.colored .info {
+  background: #1a4a72;
+}
+
+.ih-item.square.effect10 .img {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.ih-item.square.effect10 .info {
+  background: #83a0b0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.ih-item.square.effect10 .info ul {
+  margin-top: 20px;
+}
+
+.ih-item.square.effect10 .info li {
+  /*font-style: italic;*/
+  font-size: 14px;
+  position: relative;
+  color: #fff;
+  margin-left: 50px;
+  margin-bottom: 16px;
+  /*padding: 20px 20px 20px;*/
+  /*text-align: center;*/
+}
+.ih-item.square.effect10 a:hover .info {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ih-item.square.effect10.bottom_to_top .img {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+.ih-item.square.effect10.bottom_to_top .info {
+  -webkit-transform: translateY(101%);
+  -moz-transform: translateY(101%);
+  -ms-transform: translateY(101%);
+  -o-transform: translateY(101%);
+  transform: translateY(101%);
+}
+.ih-item.square.effect10.bottom_to_top a:hover .img {
+  -webkit-transform: translateY(-101%);
+  -moz-transform: translateY(-101%);
+  -ms-transform: translateY(-101%);
+  -o-transform: translateY(-101%);
+  transform: translateY(-101%);
+}
+.ih-item.square.effect10.bottom_to_top a:hover .info {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 1200px) {
+  .ih-item.square {
+    height: 167px;
+  }
+
+  .ih-item.square.effect10 .info ul {
+    margin-top: -10px;
+  }
+
+  .ih-item.square.effect10 .info li {
+    margin-left: 30px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ih-item.square {
+        height: 227px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+    .ih-item.square {
+        height: 227px;
+  }
+  .ih-item.square.effect10 .info ul {
+    margin-top: 40px;
+  }
+  .ih-item.square.effect10 .info li {
+    margin-left: 100px;
+    margin-bottom: 12px;
+  }
+
+}

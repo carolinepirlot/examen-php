@@ -1,0 +1,1147 @@
+@font-face {
+	font-family: 'Gibson';
+	src: url('../fonts/gibson/webfonts/gibson.eot');
+	src: url('../fonts/gibson/webfonts/gibson.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/gibson/webfonts/gibson.woff') format('woff'),
+	     url('../fonts/gibson/webfonts/gibson.ttf') format('truetype'),
+	     url('../fonts/gibson/webfonts/gibson.svg#ywftsvg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gibson Light';
+	src: url('../fonts/gibson/webfonts/gibson-light.eot');
+	src: url('../fonts/gibson/webfonts/gibson-light.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/gibson/webfonts/gibson-light.woff') format('woff'),
+	     url('../fonts/gibson/webfonts/gibson-light.ttf') format('truetype'),
+	     url('../fonts/gibson/webfonts/gibson-light.svg#ywftsvg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GibsonLightItalic';
+	src: url('../fonts/gibson/webfonts/gibson-light-italic.eot');
+	src: url('../fonts/gibson/webfonts/gibson-light-italic.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/gibson/webfonts/gibson-light-italic.woff') format('woff'),
+	     url('../fonts/gibson/webfonts/gibson-light-italic.ttf') format('truetype'),
+	     url('../fonts/gibson/webfonts/gibson-light-italic.svg#ywftsvg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Variables
+
+$gris: #ccc;
+$fonce: #333;
+$bleu: #506D7D;
+$turquoise: #94CCB9;
+$rouge: #F07D65;
+$blanc: #fff;
+
+$texte: 'Gibson Light', Helvetica, sans-serif;
+$italic: 'GibsonLightItalic', Helvetica, sans-serif;
+$logo: 'Satisfy', cursive;
+$titre: 'Roboto Slab', Helvetica, serif;
+$form: 'Gibson', Helvetica, sans-sreif;
+
+
+// Bases
+
+body {
+	position: relative;
+	font-family: $texte;
+	color: $bleu;
+	background: darken($blanc, 2%);
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+li {
+	list-style: none;
+}
+
+h2 {  
+	font-family: $titre;
+	font-size: 36px;
+	font-weight: 300;
+	color: $rouge;
+	margin: 65px 0 50px; 
+}
+
+
+h3 { 
+	font-size: 18px;
+	color: $rouge;
+	font-family: $texte; 
+}
+
+h4 { 
+	margin: 78px 0 32px;
+	font-size: 24px;
+	color: $rouge;
+	font-weight: 300;
+}
+
+.error_messages {
+	color: $rouge;
+}
+
+#content {
+	margin-top: 69px;
+	ul {
+		padding-left: 0;
+		li {
+			a {
+				position: relative;
+				display: block;
+				border: 1px solid $bleu;
+				img { width: 100%; }
+
+				h3 {
+					position: absolute;
+					bottom: 0;
+					text-align: center;
+					width: 100%;
+					background: rgba(250, 250, 250, 0.85);
+					margin: 0;
+					padding: 10px 0;
+					color: lighten($bleu, 10%);
+					font-family: $titre;
+				}
+			}
+
+			p {
+				width: 80%;
+				display: block;
+				margin: 20px auto;
+			}
+		}
+	}
+}
+
+a {
+	color: darken($turquoise, 15%);
+	&:hover { color: darken($turquoise, 30%); text-decoration: none;}
+}
+
+.lien {
+	color: darken($turquoise, 15%);
+	&:hover { color: darken($turquoise, 30%);}
+}
+
+
+/* ------------------------------- HEADER */
+
+header { 
+	background: $blanc;
+	height: 73px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	border-bottom: 1px solid lighten($bleu, 45%);
+}
+
+h1 { 
+
+	.logo {
+		margin-top: -6px;
+		display: block;
+		width: 230px; height: 49px;
+		text-indent: -9999px;
+		background: url(../images/logoIndex.png) no-repeat;
+	}
+}
+
+.nav {
+	margin-top: 14px;
+	font-size: 12px;
+
+	a {
+		color: lighten($bleu, 30%);
+		font-size: 16px;
+		font-family: $texte;
+		text-align: right;
+	}
+
+	.dropdown-menu a { text-align: left;}
+
+	.caret {
+		margin-left: 10px;
+	}
+
+
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+	background: none;
+	color: $bleu;
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+	background: none;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	background: none;
+	color: $bleu;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover {
+	background-color: darken($blanc, 2%);
+}
+
+
+// Recherche rapide
+
+.quick-search {
+	padding: 0 10px;
+
+	form{ 
+		margin-top: 8px;
+		
+		&.visible{
+
+			#search {
+				opacity: 1;
+				width: 165px;
+			}
+		}
+	}
+
+	input {
+		border: 1px solid lighten($bleu, 50%);
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		border-radius: 3px;
+		height: 30px;
+		padding-left: 4px;
+		font-size: 14px;
+	}
+
+	#search {
+		position: relative;
+		top: -8px;
+		width: 0;
+		opacity: 0;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+	#submit {
+		width: 35px;
+		background: url(../images/icones/loop.png) no-repeat center;
+		border: none;
+	}
+
+}
+
+
+/* ------------------------------- FORMULAIRES */
+
+.btn {
+	font-size: 16px;
+	padding: 12px 48px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	color: $blanc;
+	background: $rouge;
+	text-shadow: 1px 1px 1px darken($rouge, 8%);
+	font-weight: 300;
+	border: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		background: darken($rouge, 6%);
+		border: none;
+		color: $blanc;
+	}
+}
+
+.form-group {
+	padding-bottom: 16px;
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+
+.form-control { height: 40px; }
+textarea.form-control { font-size: 16px;}
+
+label { font-weight: 400; font-size: 16px; }
+//input { font-size: 16px;}
+textarea {
+	width: 100%;
+	max-width: 1140px;
+	min-height: 180px;
+
+}
+
+.area {
+	width: 100%;
+	max-width: 553px;
+}
+
+.submitTop { margin-top: 30px; }
+.subTop { margin-top: 20px;}
+
+.checkbox { font-weight: 300; }
+
+.resume {
+	margin-top: -40px;
+	.form-group {
+		height: 40px;
+		margin-top: 32px;
+
+		&:first-child { margin-top: 0;}
+	}
+}
+
+.btn-group.bootstrap-select.col-sm-12 {
+	padding: 0;
+	margin: 0;
+}
+
+.btn.dropdown-toggle.selectpicker.btn-default {
+	font-size: 14px;
+	background: $blanc;
+	color: $bleu;
+	text-shadow: none;
+	height: 38px;
+	padding: 0 0 0 12px;
+	border: 1px solid #ccc;
+	margin-top: 0;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+	background: lighten($bleu, 30%);
+}
+
+.researchForm {
+	width: 100%;
+	padding: 20px;
+	background: lighten($bleu, 50%);
+	margin-top: -360px;
+
+	.labelBold {
+		font-family: $form;
+	}
+
+	input.checkbox { margin-top: 4px;}
+	#recherche {
+		padding: 12px 0;
+		width: 100%;
+	}
+}
+
+#content {
+	.research {
+		a {
+			border: none;
+		}
+	}
+}
+
+// Connexion et inscription
+
+.sign {
+
+	h2 {
+		padding-bottom: 0;
+		border-bottom: none;
+		margin-bottom: 50px;
+	}
+
+	.turquoise {
+		color: darken($turquoise, 15%);
+		padding-bottom: 2px;
+		border-bottom: 1px solid darken($turquoise, 15%);
+	}
+
+}
+
+.feedback { color: $rouge;}
+
+// Ajout d'un jeu - Formulaire
+
+#ajout {
+	img { background: darken($blanc, 6%);}
+	.resume {
+		.form-group:nth-child(1) { margin-top: 56px;}
+		a { border:none;}
+	}
+
+	.visuel {
+		height: 254px;
+		padding: 0; 
+		width: 100%;
+	}
+
+	.auteurs { margin-top: 18px;}
+
+	#regles, #invention { width: 100%; max-width: 553px;}
+
+	.btn { margin-top: 40px; }
+
+}
+
+button {
+	span {
+		height: 25px; width: 30px;
+		display: inline-block;
+		overflow: hidden;
+		margin-right: 16px;
+		float: left;
+	}
+
+	.ajoutV { background: url(../images/icones/resume2.png); }
+	.editP { background: url(../images/icones/resume.png); background-position: 0 -100px; }
+}
+
+
+
+// Edition d'un jeu - Formulaire
+
+#editionJeu {
+	h2 { margin-bottom: 80px;}
+	.resumeSelect { margin-bottom: 20px;}
+	.resume {
+		a { border:none;}
+		.form-group:first-child { margin-top: 32px;}
+
+	}
+	.valid {
+		a { border: none;}
+	}
+}
+
+.results { margin-top: 20px;}
+
+
+/* ------------------------------- ACCUEIL */
+
+
+#accueil {
+
+	h2 {
+		text-indent: -9999px;
+		width: 390px; height: 90px;
+		display: block;
+		background: url(../images/logoAccueil.png) no-repeat;
+		margin: 30px auto 55px;
+	}
+
+	#content { 
+
+		.accroche {
+			margin-top: 160px;
+
+			.slogan {
+				color: $blanc;
+				font-size: 27px;
+				text-shadow: 1px 1px 1px lighten(#000, 30%);
+				a {
+					margin-top: 28px;
+
+					&:first-child {
+						margin-right: 50px;
+					}
+				}
+			}
+		}
+
+		.bgElem {
+			display: none;
+		}
+
+		.bgUn {
+			display: block;
+			width: 100%;
+			background: url(../images/accueil.jpg) no-repeat center;
+			-webkit-background-size: cover; 
+  			-moz-background-size: cover; 
+  			-ms-background-size: cover;
+  			-o-background-size: cover; 
+  			background-size: cover; 
+
+			.btnaccueil { margin: 50px 0 0;}
+		}
+
+	}
+
+	.explication {
+		margin-top: 30px;
+		margin-left: 292px;
+		padding: 12px 24px 4px;
+		background: rgba(255, 255, 255, 0.8);
+		display: inline-block;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		border-radius: 4px;
+		color: darken($bleu, 5%);
+	}
+	
+}
+
+#indexPerso {
+	h3 {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+	.auxquels { margin-top: 50px;}
+	.catalogue { margin-left: 20px;}
+	.listing { 
+		margin-top: 40px;
+		&:first-child { margin-right: 20px;}
+	}
+}
+
+/* ------------------------------- LISTE DES JEUX */
+
+.dernierJeu {
+	margin-bottom: 38px;
+}
+
+.listeJeux {
+
+	margin-bottom: 32px;
+
+	img {
+		height: 195px;
+	}
+
+	span {
+		height: 25px; width: 30px;
+		display: inline-block;
+		overflow: hidden;
+		background: url(../images/icones/resume.png);
+		margin-right: 16px;
+		float: left;
+	}
+
+	.personnes { background-position: 0 0; }
+	.sablier { background-position: 0 -25px; }
+	.identite { background-position: 0 -50px; }
+	.coupe { background-position: 0 -75px; }
+
+	p {
+		position: relative;
+		top: 4px;
+	}
+
+
+}
+
+/* ------------------------------- TABLEAUX */
+
+table {
+	thead {
+		td { font-family: $form; }
+	}
+	.titreEvent { color: darken($turquoise, 15%);}
+	.nomEvent { width: 340px;}
+}
+
+#fiche, #profil {
+	table {
+		margin-top: 30px;
+	}
+}
+
+
+/* ------------------------------- FICHE D'UN JEU */
+
+.responsiveInfos { 
+	display: none;
+	margin-top: -20px;
+	//.www { margin-left: 100px;}
+	li {
+		margin-bottom: 30px;
+		margin-right: 16px;
+		text-align: left;
+		display: inline-block;
+
+		span {
+			height: 25px; width: 30px;
+			display: inline-block;
+			overflow: hidden;
+			background: url(../images/icones/resume.png);
+			margin-right: 14px;
+			float: left;
+		}
+
+		.personnes { background-position: 0 0; }
+		.sablier { background-position: 0 -25px; }
+		.identite { background-position: 0 -50px; }
+		.coupe { background-position: 0 -75px; }
+		
+	}
+}
+
+.visuelFiche {
+	height: 100%;
+	min-height: 460px;
+	overflow: hidden;
+	position: relative;
+
+	width: 100%;
+	background: no-repeat center;
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-ms-background-size: cover;
+	-o-background-size: cover; 
+	background-size: cover; 
+
+	h2 {
+		display: inline-block;
+		padding: 10px 20px;
+		background: rgba(250, 250, 250, 0.85);
+		margin-top: 138px;
+	}
+
+	.centerH2 {
+		margin-top: 138px;
+	}
+}
+
+#fiche, #profil {
+
+	.nav-tabs {
+		border-bottom: 1px solid lighten($bleu, 30%);
+	}
+
+	#myTab {
+		margin-top: 80px;
+
+		a {
+			border: 1px solid lighten($bleu, 30%);
+			border-bottom-color: transparent;
+			color: darken($turquoise, 15%);
+
+			&:hover { color: darken($turquoise, 30%); }
+			
+		}
+
+		li {
+			background: darken($blanc, 12%);
+			
+		}
+
+		.active {
+			background: none;
+		}
+	}
+
+	.descriptif { margin: 50px 0 32px; }
+
+	p {
+		a {
+			color: darken($turquoise, 15%);
+		}
+
+		span { font-size: 14px; color: darken($turquoise, 15%); }
+	}
+
+	.droits { margin-top: 36px;}
+
+	.pictos { 
+		margin-top: 100px;
+
+		li {
+			margin-bottom: 30px;
+			width: 100%;
+			width: 258px;
+
+			span {
+				height: 25px; width: 30px;
+				display: inline-block;
+				overflow: hidden;
+				background: url(../images/icones/resume.png);
+				margin-right: 16px;
+				float: left;
+			}
+
+			.personnes { background-position: 0 0; }
+			.sablier { background-position: 0 -25px; }
+			.identite { background-position: 0 -50px; }
+			.coupe { background-position: 0 -75px; }
+			.plume { background-position: 0 -100px; margin-left: -34px; }
+			.poubelle { background-position: 0 -125px; margin-left: -34px; }
+
+
+			p { position: relative; top: 2px; }
+
+			.btn {
+				border: 1px solid lighten($rouge, 10%); 
+				display: block;
+				margin-bottom: 40px;
+
+				&:last-child { margin-bottom: 0; }
+
+			}
+		}
+
+		
+	}
+
+	.retour {
+		margin-top: 120px;
+		span {
+			height: 25px; width: 30px;
+			display: inline-block;
+			overflow: hidden;
+			background: url(../images/icones/resume2.png);
+			margin-right: 8px;
+			float: left;
+			background-position: 0 -75px;
+		}
+
+	
+	
+	}
+
+}
+
+
+/* ------------------------------- FICHE D'UN EVENEMENT */
+
+#evenement {
+
+	.www {
+		margin-bottom: 20px;
+		li {
+			display: inline-block;
+			margin-right: 40px;
+			&:last-child { margin-right: 0;}
+
+			span {
+				height: 25px; width: 30px;
+				display: inline-block;
+				overflow: hidden;
+				background: url(../images/icones/resume.png);
+				margin: -2px 8px 0 0;
+				float: left;
+			}
+
+			.personnes { background-position: 0 0; }
+			.ville { background-position: 0 -150px; }
+			.date { background-position: 0 -175px; }
+			.heure {
+				background: url(../images/icones/resume2.png);
+				background-position: 0 -25px;
+			}
+
+			.libre {
+				display: inline;
+				font-size: 13px;
+				color: darken($turquoise, 15%);
+			}
+		}
+	}
+
+	h2 { margin-bottom: 15px; }
+	h3 {
+		margin-bottom: 30px;
+		font-size: 26px;
+		color: $rouge;
+		font-family: $titre;
+	}
+
+	.createur {
+		color: lighten($bleu, 30%);
+		margin-bottom: 60px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid lighten($bleu, 45%);
+
+	}
+
+	.reglement p { width: 95%;}
+
+	.participation { 
+		margin: 50px 0 25px; 
+		a { color: darken($turquoise, 15%);
+			&:hover { color: darken($turquoise, 30%); text-decoration: none;}
+		}
+	}
+	#participation { padding: 12px 55px;}
+
+	textarea {
+		margin-top: 30px;
+		width: 100%;
+		max-width: 553px;
+		min-height: 100px;
+	}
+
+	.droits {
+		margin-top: 20px;
+		a:first-child { margin-right: 20px;}
+		span {
+				height: 25px; width: 30px;
+				display: inline-block;
+				overflow: hidden;
+				background: url(../images/icones/resume.png);
+				margin-right: 16px;
+				float: left;
+			}
+			.plume { background-position: 0 -100px; margin-left: -34px; }
+			.poubelle { background-position: 0 -125px; margin-left: -34px; }
+
+	}
+	
+}
+
+.particiP { 
+	height: 25px; width: 30px;
+	display: inline-block;
+	overflow: hidden;
+	margin-right: 16px;
+	float: left;
+	background: url(../images/icones/resume2.png); 
+	background-position: 0 -100px;
+}
+
+/* ------------------------------- A CLASSER */
+
+
+
+#connexion {
+
+	.connexion {
+		margin-top: 60px;
+
+		.form-group {
+			float:none;
+		}
+
+		.btn { margin-top: 20px;}
+	}
+
+}
+
+
+/* ------------------------------- COMMENTAIRES */
+
+.com {
+	padding-bottom: 30px;
+	//border-bottom: 1px solid lighten($turquoise, 20%);
+
+	.auteurCom {
+		color: darken($turquoise, 15%);
+		display: inline-block;
+	
+		h5 {
+			margin-top: 30px;
+			font-weight: 300;
+			font-size: 18px;
+		}
+	}
+
+	.hope { margin-left: 50px;}
+
+	.citation {
+		height: 25px; width: 30px;
+		display: inline-block;
+		overflow: hidden;
+		background: url(../images/icones/resume2.png);
+		margin: 26px 8px 0 0;
+		float: left;
+		background-position: 0 -50px;
+	}
+
+}
+.areaCom { width: 100%; max-width: 748px; }
+
+#avis {
+	margin-top: 30px;
+}
+
+/* ------------------------------- PROFIL DES UTILISATEURS */
+
+#profil {
+
+
+
+	.espaceTab { 
+		margin-top: 30px;
+		.prev {
+			img { margin-top: 30px;}
+			#avatar { margin: 28px auto;}
+		}
+		
+	}
+	.avatarProfil {
+		width: 250px;
+		height: 250px;
+		display: block;
+		margin: 8px auto;
+		border: 12px solid $rouge;
+	}
+	.story { margin-top: 20px;}
+	p {margin-bottom: 24px;}
+	.profilInfos { font-size: 16px;color: $rouge;}
+}
+
+.supProfil { margin-bottom: 30px;}
+
+/* ------------------------------- PAGE CREDITS */
+
+#credits, #politique {
+	#content {
+		h3 {
+			margin-bottom: 30px;
+			font-size: 30px;
+		}
+		.sources { margin-top: 60px;}
+		ul {
+			a {
+				display: inline-block;
+				border: none;
+				color: darken($turquoise, 15%);
+			}
+		}
+		.about {
+			a { color: darken($turquoise, 15%);}
+			p {
+				width: 90%;
+				margin-bottom: 24px;
+			}
+		}
+	}	
+}
+
+// Messages de remerciements
+
+.popup {
+	text-align: center;
+	position: fixed;
+	display: none;
+	z-index: 1000;
+	background: darken($blanc, 2%);
+	border: 3px solid $rouge;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	padding: 20px;
+}
+
+.popup button {
+	margin-top: 20px;
+	background: $rouge;
+	border: 2px solid $rouge;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+	.popup button:hover {
+		color: $rouge;
+		background: #fff
+	}
+
+.overlay {
+	position: absolute;
+	display: none;
+	z-index: 999;
+	background: #fff;
+	opacity: .5;
+	width: 100%;
+	height: 100%;
+}
+
+.suppre {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 24px;
+}
+
+/* ------------------------------- FOOTER */
+
+footer { 
+	margin-top: 80px; 
+	font-size: 14px; 
+	color: lighten($bleu, 20%); 
+	.container {padding-top: 10px; border-top: 1px solid lighten($bleu, 40%);}
+	a { color: darken($turquoise, 15%);}
+}
+
+#accueil {
+	footer {
+		margin-top: 0;
+		padding-top: 10px;
+		.container { padding-top: 0; border: none;}
+		a {
+			color: lighten($bleu, 10%);
+		}
+	}
+}
+
+
+/* ------------------------------- RESPONSIVE */
+
+@media screen and (max-width: 1200px) { 
+	.long { width: 200px;} 
+	.listeJeux {
+		img { height: 165px; }
+	}
+}
+@media screen and (max-width: 900px) { .long { width: 186px;} }
+@media screen and (max-width: 768px){
+
+	header {
+		position: static;
+
+		h1 a { margin: 0 auto; }
+
+		.pull-right {
+			float: none !important;
+			li {
+				width: 33%;
+			}
+			li a { text-align: center;}
+			.quick-search { display: none;}
+		}
+	}
+	// Accueil
+	#accueil #content .bgUn {
+		margin-top: -70px;
+	}
+	h2 { margin-top: 0;}
+	.visuelFiche {
+		top: -70px;
+	}
+	.derniersIndex { margin-top: -40px;}
+	.long { width: 170px;}
+	// Liste jeux
+	.researchForm { margin-top: -390px;}
+	.dernierJeu { margin-bottom: 0;}
+	// Page Fiche jeu
+	#fiche {
+		#myTab { margin-top: 30px;}
+		.pictos { margin-top: 30px;}
+		.pictos .largeur span { margin: 0 0 0 -40px;}
+	}
+	// Page Connexion / Inscription
+	.sign { label { width: 100%;} } 
+	//Page Credits
+	.soutien { margin-top: 60px;}
+	//Page resultats
+	.results { margin-top: 0;}
+
+}
+
+@media screen and (max-width: 767px) {
+	header {height: 130px;}
+	#accueil {
+		#content .accroche .slogan {
+			a:first-child { margin-right: 10px;}
+			margin-top: -70px;
+		} 
+	} 
+	.resume { 
+		margin-top: -80px;
+		&:last-child { margin-bottom: 40px;}
+	}
+	.responsiveInfos { display: block;}
+	.valid { margin-bottom: 40px;}
+	.inputEspace { 
+		margin-bottom: 40px;
+		&:first-child { margin-top: 30px;}
+	}
+	#fiche .pictos { display: none;}
+	#profil #myTab { margin-top: 20px;}
+	.nav-tabs li {
+		float: none !important;
+		a { text-align: left;}
+	}
+	.research { display: none;}
+	.dernierJeu .btn { width: 100%; display: block;}
+	.visuelFiche { 
+		height: 100%; min-height: 360px; }
+	.listeJeux {
+		img { height: 225px; }
+	}
+}
+@media screen and (max-width: 606px) {
+	#accueil {
+		.h2titre { display: none;}
+		#content .accroche .slogan {
+			a:first-child { margin-right: 0;}
+			.btn { width: 100%; display: block;}
+		} 
+	} 
+}
+
+@media screen and (max-width: 540px) {
+	#indexPerso {
+		.btn { display: block;}
+		.visuelFiche {
+				h2 { margin-top: 40px;}
+			} 
+		.catalogue { margin: 24px 0; }
+		.listing { 
+			&:first-child { margin-right: 0;}
+		}
+	}
+	#fiche {
+		#myTab { margin-top: 0;}
+		.btn { width: 100%; display: block;}
+	}
+	#evenement {
+		.droits a:first-child { margin: 0 0 30px 0;}
+		.btn { display: block; width: 100%;}
+		.createur { margin-bottom: 30px;}
+		.www {
+			li { 
+				margin-bottom: 20px;
+				margin-right: 10px;
+			}
+		}
+		h4 { margin: 40px 0 20px;}
+		#participation { margin: -30px 0 10px;}
+	}
+	.blocs { margin-top: -40px;}
+}
+
+@media screen and (max-width: 484px) {
+	header { 
+		height: 220px;
+		.pull-right li { 
+			width: 100%;
+			display: inline;
+			&:nth-child(2) {
+				border-top: 1px solid lighten($bleu, 45%);
+				border-bottom: 1px solid lighten($bleu, 45%);
+			}
+		}
+	}
+
+	.tabNbre { display: none;}
+
+	footer span { display: none; }
+}

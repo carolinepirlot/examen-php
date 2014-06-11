@@ -1,0 +1,933 @@
+@font-face {
+  font-family: 'Gibson';
+  src: url("../fonts/gibson/webfonts/gibson.eot");
+  src: url("../fonts/gibson/webfonts/gibson.eot?#iefix") format("embedded-opentype"), url("../fonts/gibson/webfonts/gibson.woff") format("woff"), url("../fonts/gibson/webfonts/gibson.ttf") format("truetype"), url("../fonts/gibson/webfonts/gibson.svg#ywftsvg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gibson Light';
+  src: url("../fonts/gibson/webfonts/gibson-light.eot");
+  src: url("../fonts/gibson/webfonts/gibson-light.eot?#iefix") format("embedded-opentype"), url("../fonts/gibson/webfonts/gibson-light.woff") format("woff"), url("../fonts/gibson/webfonts/gibson-light.ttf") format("truetype"), url("../fonts/gibson/webfonts/gibson-light.svg#ywftsvg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GibsonLightItalic';
+  src: url("../fonts/gibson/webfonts/gibson-light-italic.eot");
+  src: url("../fonts/gibson/webfonts/gibson-light-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/gibson/webfonts/gibson-light-italic.woff") format("woff"), url("../fonts/gibson/webfonts/gibson-light-italic.ttf") format("truetype"), url("../fonts/gibson/webfonts/gibson-light-italic.svg#ywftsvg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  position: relative;
+  font-family: "Gibson Light", Helvetica, sans-serif;
+  color: #506d7d;
+  background: #fafafa;
+  font-size: 16px;
+  line-height: 1.5; }
+
+li {
+  list-style: none; }
+
+h2 {
+  font-family: "Roboto Slab", Helvetica, serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: #f07d65;
+  margin: 65px 0 50px; }
+
+h3 {
+  font-size: 18px;
+  color: #f07d65;
+  font-family: "Gibson Light", Helvetica, sans-serif; }
+
+h4 {
+  margin: 78px 0 32px;
+  font-size: 24px;
+  color: #f07d65;
+  font-weight: 300; }
+
+.error_messages {
+  color: #f07d65; }
+
+#content {
+  margin-top: 69px; }
+  #content ul {
+    padding-left: 0; }
+    #content ul li a {
+      position: relative;
+      display: block;
+      border: 1px solid #506d7d; }
+      #content ul li a img {
+        width: 100%; }
+      #content ul li a h3 {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        background: rgba(250, 250, 250, 0.85);
+        margin: 0;
+        padding: 10px 0;
+        color: #64889c;
+        font-family: "Roboto Slab", Helvetica, serif; }
+    #content ul li p {
+      width: 80%;
+      display: block;
+      margin: 20px auto; }
+
+a {
+  color: #60b397; }
+  a:hover {
+    color: #40876f;
+    text-decoration: none; }
+
+.lien {
+  color: #60b397; }
+  .lien:hover {
+    color: #40876f; }
+
+/* ------------------------------- HEADER */
+header {
+  background: white;
+  height: 73px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: 1px solid #d1dce2; }
+
+h1 .logo {
+  margin-top: -6px;
+  display: block;
+  width: 230px;
+  height: 49px;
+  text-indent: -9999px;
+  background: url(../images/logoIndex.png) no-repeat; }
+
+.nav {
+  margin-top: 14px;
+  font-size: 12px; }
+  .nav a {
+    color: #a2b8c4;
+    font-size: 16px;
+    font-family: "Gibson Light", Helvetica, sans-serif;
+    text-align: right; }
+  .nav .dropdown-menu a {
+    text-align: left; }
+  .nav .caret {
+    margin-left: 10px; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background: none;
+  color: #506d7d; }
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background: none; }
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background: none;
+  color: #506d7d; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
+  background-color: #fafafa; }
+
+.quick-search {
+  padding: 0 10px; }
+  .quick-search form {
+    margin-top: 8px; }
+    .quick-search form.visible #search {
+      opacity: 1;
+      width: 165px; }
+  .quick-search input {
+    border: 1px solid #e1e8eb;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 4px;
+    font-size: 14px; }
+  .quick-search #search {
+    position: relative;
+    top: -8px;
+    width: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .quick-search #submit {
+    width: 35px;
+    background: url(../images/icones/loop.png) no-repeat center;
+    border: none; }
+
+/* ------------------------------- FORMULAIRES */
+.btn {
+  font-size: 16px;
+  padding: 12px 48px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  background: #f07d65;
+  text-shadow: 1px 1px 1px #ec5e40;
+  font-weight: 300;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .btn:hover {
+    background: #ed6549;
+    border: none;
+    color: white; }
+
+.form-group {
+  padding-bottom: 16px;
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.form-control {
+  height: 40px; }
+
+textarea.form-control {
+  font-size: 16px; }
+
+label {
+  font-weight: 400;
+  font-size: 16px; }
+
+textarea {
+  width: 100%;
+  max-width: 1140px;
+  min-height: 180px; }
+
+.area {
+  width: 100%;
+  max-width: 553px; }
+
+.submitTop {
+  margin-top: 30px; }
+
+.subTop {
+  margin-top: 20px; }
+
+.checkbox {
+  font-weight: 300; }
+
+.resume {
+  margin-top: -40px; }
+  .resume .form-group {
+    height: 40px;
+    margin-top: 32px; }
+    .resume .form-group:first-child {
+      margin-top: 0; }
+
+.btn-group.bootstrap-select.col-sm-12 {
+  padding: 0;
+  margin: 0; }
+
+.btn.dropdown-toggle.selectpicker.btn-default {
+  font-size: 14px;
+  background: white;
+  color: #506d7d;
+  text-shadow: none;
+  height: 38px;
+  padding: 0 0 0 12px;
+  border: 1px solid #ccc;
+  margin-top: 0; }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background: #a2b8c4; }
+
+.researchForm {
+  width: 100%;
+  padding: 20px;
+  background: #e1e8eb;
+  margin-top: -360px; }
+  .researchForm .labelBold {
+    font-family: "Gibson", Helvetica, sans-sreif; }
+  .researchForm input.checkbox {
+    margin-top: 4px; }
+  .researchForm #recherche {
+    padding: 12px 0;
+    width: 100%; }
+
+#content .research a {
+  border: none; }
+
+.sign h2 {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 50px; }
+.sign .turquoise {
+  color: #60b397;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #60b397; }
+
+.feedback {
+  color: #f07d65; }
+
+#ajout img {
+  background: #f0f0f0; }
+#ajout .resume .form-group:nth-child(1) {
+  margin-top: 56px; }
+#ajout .resume a {
+  border: none; }
+#ajout .visuel {
+  height: 254px;
+  padding: 0;
+  width: 100%; }
+#ajout .auteurs {
+  margin-top: 18px; }
+#ajout #regles, #ajout #invention {
+  width: 100%;
+  max-width: 553px; }
+#ajout .btn {
+  margin-top: 40px; }
+
+button span {
+  height: 25px;
+  width: 30px;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 16px;
+  float: left; }
+button .ajoutV {
+  background: url(../images/icones/resume2.png); }
+button .editP {
+  background: url(../images/icones/resume.png);
+  background-position: 0 -100px; }
+
+#editionJeu h2 {
+  margin-bottom: 80px; }
+#editionJeu .resumeSelect {
+  margin-bottom: 20px; }
+#editionJeu .resume a {
+  border: none; }
+#editionJeu .resume .form-group:first-child {
+  margin-top: 32px; }
+#editionJeu .valid a {
+  border: none; }
+
+.results {
+  margin-top: 20px; }
+
+/* ------------------------------- ACCUEIL */
+#accueil h2 {
+  text-indent: -9999px;
+  width: 390px;
+  height: 90px;
+  display: block;
+  background: url(../images/logoAccueil.png) no-repeat;
+  margin: 30px auto 55px; }
+#accueil #content .accroche {
+  margin-top: 160px; }
+  #accueil #content .accroche .slogan {
+    color: white;
+    font-size: 27px;
+    text-shadow: 1px 1px 1px #4d4d4d; }
+    #accueil #content .accroche .slogan a {
+      margin-top: 28px; }
+      #accueil #content .accroche .slogan a:first-child {
+        margin-right: 50px; }
+#accueil #content .bgElem {
+  display: none; }
+#accueil #content .bgUn {
+  display: block;
+  width: 100%;
+  background: url(../images/accueil.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  #accueil #content .bgUn .btnaccueil {
+    margin: 50px 0 0; }
+#accueil .explication {
+  margin-top: 30px;
+  margin-left: 292px;
+  padding: 12px 24px 4px;
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: #465f6d; }
+
+#indexPerso h3 {
+  font-size: 30px;
+  margin-bottom: 30px; }
+#indexPerso .auxquels {
+  margin-top: 50px; }
+#indexPerso .catalogue {
+  margin-left: 20px; }
+#indexPerso .listing {
+  margin-top: 40px; }
+  #indexPerso .listing:first-child {
+    margin-right: 20px; }
+
+/* ------------------------------- LISTE DES JEUX */
+.dernierJeu {
+  margin-bottom: 38px; }
+
+.listeJeux {
+  margin-bottom: 32px; }
+  .listeJeux img {
+    height: 195px; }
+  .listeJeux span {
+    height: 25px;
+    width: 30px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../images/icones/resume.png);
+    margin-right: 16px;
+    float: left; }
+  .listeJeux .personnes {
+    background-position: 0 0; }
+  .listeJeux .sablier {
+    background-position: 0 -25px; }
+  .listeJeux .identite {
+    background-position: 0 -50px; }
+  .listeJeux .coupe {
+    background-position: 0 -75px; }
+  .listeJeux p {
+    position: relative;
+    top: 4px; }
+
+/* ------------------------------- TABLEAUX */
+table thead td {
+  font-family: "Gibson", Helvetica, sans-sreif; }
+table .titreEvent {
+  color: #60b397; }
+table .nomEvent {
+  width: 340px; }
+
+#fiche table, #profil table {
+  margin-top: 30px; }
+
+/* ------------------------------- FICHE D'UN JEU */
+.responsiveInfos {
+  display: none;
+  margin-top: -20px; }
+  .responsiveInfos li {
+    margin-bottom: 30px;
+    margin-right: 16px;
+    text-align: left;
+    display: inline-block; }
+    .responsiveInfos li span {
+      height: 25px;
+      width: 30px;
+      display: inline-block;
+      overflow: hidden;
+      background: url(../images/icones/resume.png);
+      margin-right: 14px;
+      float: left; }
+    .responsiveInfos li .personnes {
+      background-position: 0 0; }
+    .responsiveInfos li .sablier {
+      background-position: 0 -25px; }
+    .responsiveInfos li .identite {
+      background-position: 0 -50px; }
+    .responsiveInfos li .coupe {
+      background-position: 0 -75px; }
+
+.visuelFiche {
+  height: 100%;
+  min-height: 460px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .visuelFiche h2 {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(250, 250, 250, 0.85);
+    margin-top: 138px; }
+  .visuelFiche .centerH2 {
+    margin-top: 138px; }
+
+#fiche .nav-tabs, #profil .nav-tabs {
+  border-bottom: 1px solid #a2b8c4; }
+#fiche #myTab, #profil #myTab {
+  margin-top: 80px; }
+  #fiche #myTab a, #profil #myTab a {
+    border: 1px solid #a2b8c4;
+    border-bottom-color: transparent;
+    color: #60b397; }
+    #fiche #myTab a:hover, #profil #myTab a:hover {
+      color: #40876f; }
+  #fiche #myTab li, #profil #myTab li {
+    background: #e0e0e0; }
+  #fiche #myTab .active, #profil #myTab .active {
+    background: none; }
+#fiche .descriptif, #profil .descriptif {
+  margin: 50px 0 32px; }
+#fiche p a, #profil p a {
+  color: #60b397; }
+#fiche p span, #profil p span {
+  font-size: 14px;
+  color: #60b397; }
+#fiche .droits, #profil .droits {
+  margin-top: 36px; }
+#fiche .pictos, #profil .pictos {
+  margin-top: 100px; }
+  #fiche .pictos li, #profil .pictos li {
+    margin-bottom: 30px;
+    width: 100%;
+    width: 258px; }
+    #fiche .pictos li span, #profil .pictos li span {
+      height: 25px;
+      width: 30px;
+      display: inline-block;
+      overflow: hidden;
+      background: url(../images/icones/resume.png);
+      margin-right: 16px;
+      float: left; }
+    #fiche .pictos li .personnes, #profil .pictos li .personnes {
+      background-position: 0 0; }
+    #fiche .pictos li .sablier, #profil .pictos li .sablier {
+      background-position: 0 -25px; }
+    #fiche .pictos li .identite, #profil .pictos li .identite {
+      background-position: 0 -50px; }
+    #fiche .pictos li .coupe, #profil .pictos li .coupe {
+      background-position: 0 -75px; }
+    #fiche .pictos li .plume, #profil .pictos li .plume {
+      background-position: 0 -100px;
+      margin-left: -34px; }
+    #fiche .pictos li .poubelle, #profil .pictos li .poubelle {
+      background-position: 0 -125px;
+      margin-left: -34px; }
+    #fiche .pictos li p, #profil .pictos li p {
+      position: relative;
+      top: 2px; }
+    #fiche .pictos li .btn, #profil .pictos li .btn {
+      border: 1px solid #f5a493;
+      display: block;
+      margin-bottom: 40px; }
+      #fiche .pictos li .btn:last-child, #profil .pictos li .btn:last-child {
+        margin-bottom: 0; }
+#fiche .retour, #profil .retour {
+  margin-top: 120px; }
+  #fiche .retour span, #profil .retour span {
+    height: 25px;
+    width: 30px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../images/icones/resume2.png);
+    margin-right: 8px;
+    float: left;
+    background-position: 0 -75px; }
+
+/* ------------------------------- FICHE D'UN EVENEMENT */
+#evenement .www {
+  margin-bottom: 20px; }
+  #evenement .www li {
+    display: inline-block;
+    margin-right: 40px; }
+    #evenement .www li:last-child {
+      margin-right: 0; }
+    #evenement .www li span {
+      height: 25px;
+      width: 30px;
+      display: inline-block;
+      overflow: hidden;
+      background: url(../images/icones/resume.png);
+      margin: -2px 8px 0 0;
+      float: left; }
+    #evenement .www li .personnes {
+      background-position: 0 0; }
+    #evenement .www li .ville {
+      background-position: 0 -150px; }
+    #evenement .www li .date {
+      background-position: 0 -175px; }
+    #evenement .www li .heure {
+      background: url(../images/icones/resume2.png);
+      background-position: 0 -25px; }
+    #evenement .www li .libre {
+      display: inline;
+      font-size: 13px;
+      color: #60b397; }
+#evenement h2 {
+  margin-bottom: 15px; }
+#evenement h3 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #f07d65;
+  font-family: "Roboto Slab", Helvetica, serif; }
+#evenement .createur {
+  color: #a2b8c4;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d1dce2; }
+#evenement .reglement p {
+  width: 95%; }
+#evenement .participation {
+  margin: 50px 0 25px; }
+  #evenement .participation a {
+    color: #60b397; }
+    #evenement .participation a:hover {
+      color: #40876f;
+      text-decoration: none; }
+#evenement #participation {
+  padding: 12px 55px; }
+#evenement textarea {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 553px;
+  min-height: 100px; }
+#evenement .droits {
+  margin-top: 20px; }
+  #evenement .droits a:first-child {
+    margin-right: 20px; }
+  #evenement .droits span {
+    height: 25px;
+    width: 30px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../images/icones/resume.png);
+    margin-right: 16px;
+    float: left; }
+  #evenement .droits .plume {
+    background-position: 0 -100px;
+    margin-left: -34px; }
+  #evenement .droits .poubelle {
+    background-position: 0 -125px;
+    margin-left: -34px; }
+
+.particiP {
+  height: 25px;
+  width: 30px;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 16px;
+  float: left;
+  background: url(../images/icones/resume2.png);
+  background-position: 0 -100px; }
+
+/* ------------------------------- A CLASSER */
+#connexion .connexion {
+  margin-top: 60px; }
+  #connexion .connexion .form-group {
+    float: none; }
+  #connexion .connexion .btn {
+    margin-top: 20px; }
+
+/* ------------------------------- COMMENTAIRES */
+.com {
+  padding-bottom: 30px; }
+  .com .auteurCom {
+    color: #60b397;
+    display: inline-block; }
+    .com .auteurCom h5 {
+      margin-top: 30px;
+      font-weight: 300;
+      font-size: 18px; }
+  .com .hope {
+    margin-left: 50px; }
+  .com .citation {
+    height: 25px;
+    width: 30px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../images/icones/resume2.png);
+    margin: 26px 8px 0 0;
+    float: left;
+    background-position: 0 -50px; }
+
+.areaCom {
+  width: 100%;
+  max-width: 748px; }
+
+#avis {
+  margin-top: 30px; }
+
+/* ------------------------------- PROFIL DES UTILISATEURS */
+#profil .espaceTab {
+  margin-top: 30px; }
+  #profil .espaceTab .prev img {
+    margin-top: 30px; }
+  #profil .espaceTab .prev #avatar {
+    margin: 28px auto; }
+#profil .avatarProfil {
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: 8px auto;
+  border: 12px solid #f07d65; }
+#profil .story {
+  margin-top: 20px; }
+#profil p {
+  margin-bottom: 24px; }
+#profil .profilInfos {
+  font-size: 16px;
+  color: #f07d65; }
+
+.supProfil {
+  margin-bottom: 30px; }
+
+/* ------------------------------- PAGE CREDITS */
+#credits #content h3, #politique #content h3 {
+  margin-bottom: 30px;
+  font-size: 30px; }
+#credits #content .sources, #politique #content .sources {
+  margin-top: 60px; }
+#credits #content ul a, #politique #content ul a {
+  display: inline-block;
+  border: none;
+  color: #60b397; }
+#credits #content .about a, #politique #content .about a {
+  color: #60b397; }
+#credits #content .about p, #politique #content .about p {
+  width: 90%;
+  margin-bottom: 24px; }
+
+.popup {
+  text-align: center;
+  position: fixed;
+  display: none;
+  z-index: 1000;
+  background: #fafafa;
+  border: 3px solid #f07d65;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 20px; }
+
+.popup button {
+  margin-top: 20px;
+  background: #f07d65;
+  border: 2px solid #f07d65;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.popup button:hover {
+  color: #f07d65;
+  background: white; }
+
+.overlay {
+  position: absolute;
+  display: none;
+  z-index: 999;
+  background: #fff;
+  opacity: .5;
+  width: 100%;
+  height: 100%; }
+
+.suppre {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 24px; }
+
+/* ------------------------------- FOOTER */
+footer {
+  margin-top: 80px;
+  font-size: 14px;
+  color: #83a0b0; }
+  footer .container {
+    padding-top: 10px;
+    border-top: 1px solid #c1d0d8; }
+  footer a {
+    color: #60b397; }
+
+#accueil footer {
+  margin-top: 0;
+  padding-top: 10px; }
+  #accueil footer .container {
+    padding-top: 0;
+    border: none; }
+  #accueil footer a {
+    color: #64889c; }
+
+/* ------------------------------- RESPONSIVE */
+@media screen and (max-width: 1200px) {
+  .long {
+    width: 200px; }
+
+  .listeJeux img {
+    height: 165px; } }
+@media screen and (max-width: 900px) {
+  .long {
+    width: 186px; } }
+@media screen and (max-width: 768px) {
+  header {
+    position: static; }
+    header h1 a {
+      margin: 0 auto; }
+    header .pull-right {
+      float: none !important; }
+      header .pull-right li {
+        width: 33%; }
+      header .pull-right li a {
+        text-align: center; }
+      header .pull-right .quick-search {
+        display: none; }
+
+  #accueil #content .bgUn {
+    margin-top: -70px; }
+
+  h2 {
+    margin-top: 0; }
+
+  .visuelFiche {
+    top: -70px; }
+
+  .derniersIndex {
+    margin-top: -40px; }
+
+  .long {
+    width: 170px; }
+
+  .researchForm {
+    margin-top: -390px; }
+
+  .dernierJeu {
+    margin-bottom: 0; }
+
+  #fiche #myTab {
+    margin-top: 30px; }
+  #fiche .pictos {
+    margin-top: 30px; }
+  #fiche .pictos .largeur span {
+    margin: 0 0 0 -40px; }
+
+  .sign label {
+    width: 100%; }
+
+  .soutien {
+    margin-top: 60px; }
+
+  .results {
+    margin-top: 0; } }
+@media screen and (max-width: 767px) {
+  header {
+    height: 130px; }
+
+  #accueil #content .accroche .slogan {
+    margin-top: -70px; }
+    #accueil #content .accroche .slogan a:first-child {
+      margin-right: 10px; }
+
+  .resume {
+    margin-top: -80px; }
+    .resume:last-child {
+      margin-bottom: 40px; }
+
+  .responsiveInfos {
+    display: block; }
+
+  .valid {
+    margin-bottom: 40px; }
+
+  .inputEspace {
+    margin-bottom: 40px; }
+    .inputEspace:first-child {
+      margin-top: 30px; }
+
+  #fiche .pictos {
+    display: none; }
+
+  #profil #myTab {
+    margin-top: 20px; }
+
+  .nav-tabs li {
+    float: none !important; }
+    .nav-tabs li a {
+      text-align: left; }
+
+  .research {
+    display: none; }
+
+  .dernierJeu .btn {
+    width: 100%;
+    display: block; }
+
+  .visuelFiche {
+    height: 100%;
+    min-height: 360px; }
+
+  .listeJeux img {
+    height: 225px; } }
+@media screen and (max-width: 606px) {
+  #accueil .h2titre {
+    display: none; }
+  #accueil #content .accroche .slogan a:first-child {
+    margin-right: 0; }
+  #accueil #content .accroche .slogan .btn {
+    width: 100%;
+    display: block; } }
+@media screen and (max-width: 540px) {
+  #indexPerso .btn {
+    display: block; }
+  #indexPerso .visuelFiche h2 {
+    margin-top: 40px; }
+  #indexPerso .catalogue {
+    margin: 24px 0; }
+  #indexPerso .listing:first-child {
+    margin-right: 0; }
+
+  #fiche #myTab {
+    margin-top: 0; }
+  #fiche .btn {
+    width: 100%;
+    display: block; }
+
+  #evenement .droits a:first-child {
+    margin: 0 0 30px 0; }
+  #evenement .btn {
+    display: block;
+    width: 100%; }
+  #evenement .createur {
+    margin-bottom: 30px; }
+  #evenement .www li {
+    margin-bottom: 20px;
+    margin-right: 10px; }
+  #evenement h4 {
+    margin: 40px 0 20px; }
+  #evenement #participation {
+    margin: -30px 0 10px; }
+
+  .blocs {
+    margin-top: -40px; } }
+@media screen and (max-width: 484px) {
+  header {
+    height: 220px; }
+    header .pull-right li {
+      width: 100%;
+      display: inline; }
+      header .pull-right li:nth-child(2) {
+        border-top: 1px solid #d1dce2;
+        border-bottom: 1px solid #d1dce2; }
+
+  .tabNbre {
+    display: none; }
+
+  footer span {
+    display: none; } }
